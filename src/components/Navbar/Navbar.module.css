@@ -1,8 +1,18 @@
 .navbar {
-    background-color: #71DFE7;
+    background-color: #B4C6A6;
     grid-area: navbar;
+    font-size: 20px;
+    padding: 20px;
 }
 
-.navbar a {
+.navbar .item{
+    color: white;
+}
+
+.item a {
     text-decoration: none;
+}
+
+.item a.active{
+    color: gold;
 }

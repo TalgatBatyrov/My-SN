@@ -8,6 +8,8 @@ const DialogsContainer = (props) => {
 };
 
 const mapStateToProps = (state) => {
+
+    console.log(state);
     return {
         messages: state.dialogsPage.messages,
         dialogs: state.dialogsPage.dialogs
