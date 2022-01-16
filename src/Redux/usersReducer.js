@@ -1,10 +1,12 @@
+const SET_USERS = 'SET_USERS';
+
 let initialState = {
     users: []
 }
 
 const usersReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'SET_USERS':
+        case SET_USERS:
             return {
                 ...state,
                 users: [...action.users]
@@ -16,7 +18,7 @@ const usersReducer = (state = initialState, action) => {
 
 export const setUsers = (users) => {
     return {
-        type: 'SET_USERS',
+        type: SET_USERS,
         users
     }
 }
