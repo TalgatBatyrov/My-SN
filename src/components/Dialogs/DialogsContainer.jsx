@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addMessage } from '../../dialogsReducer';
+import { addMessage } from '../../Redux/dialogsReducer';
 import Dialogs from './Dialogs';
 
 const DialogsContainer = (props) => {

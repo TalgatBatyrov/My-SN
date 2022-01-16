@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { connect } from 'react-redux';
-import { setUsers } from '../../usersReducer';
+import { setUsers } from '../../Redux/usersReducer';
 import Users from './Users';
 
 class UsersContainer extends React.Component {
