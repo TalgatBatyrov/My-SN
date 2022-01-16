@@ -10,7 +10,7 @@ const MyPost = (props) => {
         setPost('');
     }
 
-    const postElements = props.post.map(p => <Post key={p.id} message={p.message} likesCount={p.likesCount} />);
+    const postElements = props.posts.map(p => <Post key={p.id} message={p.message} likesCount={p.likesCount} />);
 
     return (
         <div>

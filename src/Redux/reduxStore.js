@@ -9,8 +9,8 @@ const redusers = combineReducers({
     profilePage: profileReducer
 })
 
-const store = createStore(redusers)
+const store = createStore(redusers);
 
-window.store = store
+window.store = store;
 
-export default store
+export default store;

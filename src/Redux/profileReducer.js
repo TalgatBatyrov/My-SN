@@ -1,7 +1,7 @@
 const ADD_POST = 'ADD_POST';
 
 let initialState = {
-    post: [
+    posts: [
         { id: 1, message: 'Hello it', likesCount: 20 },
         { id: 2, message: 'It is good courses', likesCount: 7 },
         { id: 3, message: 'Dont cry', likesCount: 17 },
@@ -18,7 +18,7 @@ const profileReducer = (state = initialState, action) => {
             }
             return {
                 ...state,
-                post: [...state.post, newPost]
+                posts: [...state.posts, newPost]
             }
         default:
             return state
