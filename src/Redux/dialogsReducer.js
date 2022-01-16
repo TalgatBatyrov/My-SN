@@ -1,3 +1,5 @@
+const ADD_MESSAGE = 'ADD_MESSAGE';
+
 const initialState = {
     dialogs: [
         { id: 1, name: 'Dimych' },
@@ -17,7 +19,7 @@ const initialState = {
 
 const dialogsReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'ADD_MESSAGE': {
+        case ADD_MESSAGE: {
             let newMessage = {
                 id: 5,
                 message: action.message
@@ -34,7 +36,7 @@ const dialogsReducer = (state = initialState, action) => {
 
 export const addMessage = (message) => {
     return {
-        type: 'ADD_MESSAGE',
+        type: ADD_MESSAGE,
         message
     }
 }

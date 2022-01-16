@@ -1,3 +1,5 @@
+const ADD_POST = 'ADD_POST';
+
 let initialState = {
     post: [
         { id: 1, message: 'Hello it', likesCount: 20 },
@@ -10,7 +12,7 @@ let initialState = {
 
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'ADD_POST':
+        case ADD_POST:
             let newPost = {
                 id: 6, message: action.message, likesCount: 40
             }
@@ -25,7 +27,7 @@ const profileReducer = (state = initialState, action) => {
 
 export const addPost = (message) => {
     return {
-        type: 'ADD_POST',
+        type: ADD_POST,
         message
     }
 }
