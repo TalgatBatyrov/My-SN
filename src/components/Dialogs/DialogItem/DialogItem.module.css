@@ -1,6 +1,5 @@
 .dialog{
     font-size: 20px;
-    padding: 10px;
 }
 
 .dialog a {
@@ -10,5 +9,9 @@
 
 .dialog a.active {
     color: gold;
-    padding: 10px;
+}
+
+.dialog img {
+    width: 70px;
+    border-radius: 50%;
 }

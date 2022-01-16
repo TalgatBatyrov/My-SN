@@ -1,25 +1,27 @@
 import React, { useState } from 'react';
 import DialogItem from './DialogItem/DialogItem';
-import styles from './Dialogs.module.css'
+import styles from './Dialogs.module.css';
 import Message from './Message/Message';
 
 const Dialogs = (props) => {
+
     const [message, setMessage] = useState('');
+
     const addPost = () => {
         props.addMessage(message);
-        setMessage('')
+        setMessage('');
     }
-    const messagesElements = props.messages.map(m => <Message message={m.message} />);
-    const dialogsElements = props.dialogs.map(d => <DialogItem id={d.id} name={d.name} />);
+
+    const dialogsElements = props.dialogs.map(d => <DialogItem key={d.id} id={d.id} name={d.name} />);
+    const messagesElements = props.messages.map(m => <Message key={m.id} message={m.message} />);
+
     return (
-        <div className={styles.dialogsPageItems}>
-            <div>
+        <div className={styles.dialogs}>
+            <div className={styles.dialogsItem}>
                 {dialogsElements}
             </div>
-            <div>
-                <div>
-                    {messagesElements}
-                </div>
+            <div className={styles.messages}>
+                {messagesElements}
                 <div>
                     <input type="text" placeholder={'Enter your message'} value={message} onChange={e => setMessage(e.currentTarget.value)} />
                 </div>
@@ -27,7 +29,7 @@ const Dialogs = (props) => {
                     <button onClick={addPost}>Add message</button>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
